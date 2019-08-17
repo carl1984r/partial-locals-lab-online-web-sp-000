@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
   def new
+    binding.pry
     @student = Student.new
   end
 
