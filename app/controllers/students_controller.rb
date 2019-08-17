@@ -4,7 +4,6 @@ class StudentsController < ApplicationController
   end
 
   def create
-    binding.pry
     @student = Student.new(student_params)
     if @student.save
       redirect_to @student
@@ -23,6 +22,7 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
+    render 'index'
   end
 
   def student_params
